@@ -1,0 +1,44 @@
+* {
+  font-family: "Museo Sans Cyrl"; }
+
+.promo {
+  background: url(../img/background-1.png) center center/cover no-repeat;
+  height: 650px; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px; }
+  .header_official {
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center; }
+    .header_official span {
+      display: block;
+      font-size: 18px; }
+  .header_contact a {
+    font-size: 18px;
+    color: #ffffff;
+    text-align: right; }
+  .header_contact button {
+    display: block;
+    width: 150px;
+    height: 30px;
+    background-color: #c70101;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px; }
+
+.wrapper h1 {
+  font-size: 42px;
+  color: #ffffff;
+  text-align: right; }
+.wrapper h2 {
+  font-size: 24px;
+  color: #ffffff;
+  text-align: right; }
+
+/*# sourceMappingURL=styles.css.map */
