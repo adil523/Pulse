@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Uber777"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Pulse"
+	}
+}
