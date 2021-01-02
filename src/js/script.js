@@ -31,5 +31,24 @@ $(document).ready(function () {
             $('.content_wrapper_item').eq(i).toggleClass('content_wrapper_item_active'),
             $('.content_wrapper_list').eq(i).toggleClass('content_wrapper_list_active');
         })
-    })
-})
+    });
+
+    //modal
+
+    $('[data-modal=consulting]').on('click', function() {
+        $('.overlay, #consulting').fadeIn('slow');
+    });
+    $('.modal_close').on('click', function() {
+        $('.overlay, #order, #consulting, #thanks').fadeOut('slow');
+    });
+
+
+    $('.content_btn').on('click', function(){
+        $('.overlay, #modal').fadeIn('slow');
+    });
+    //mask
+    $("input[name=tel]").mask("+7 (999) 999-99-99");
+
+    //validate
+    $('#consulting').validate();
+});
