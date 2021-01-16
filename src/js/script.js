@@ -41,14 +41,41 @@ $(document).ready(function () {
     $('.modal_close').on('click', function() {
         $('.overlay, #order, #consulting, #thanks').fadeOut('slow');
     });
+  
 
-
-    $('.content_btn').on('click', function(){
-        $('.overlay, #modal').fadeIn('slow');
+    $('.content_btn').each(function(i){
+        $(this).on('click', function(){
+            $('#order .modal_descr').text($('.content_subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        })
     });
+
     //mask
     $("input[name=tel]").mask("+7 (999) 999-99-99");
 
     //validate
-    $('#consulting').validate();
+
+    $('#consulting_form').validate();
+    $('#consulting form').validate({
+        rules:{
+            name: "required",
+            minlength: 5,
+            tel: "required",
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            name: {
+                required: "Введите свое имя",
+                minlength: "At least {0} characters required!"},
+            tel: "Введите свой номер",
+            email: {
+              required: "Введите Вашу почту",
+              email: "Ваш почта не соответсвуюет"
+            }
+          }
+    });
+    // $('#order form').validate();
 });
